@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const { schema } = mongoose;
+const { Schema } = mongoose;
 
 const requriedNumber = {
 	type: Number,
@@ -39,4 +39,6 @@ const logEntrySchema = new Schema({
 	timestamps: true,
 });
 
-module.exports = logEntrySchema;
+const LogEntry = mongoose.model('LogEntry', logEntrySchema);
+
+module.exports = LogEntry;
